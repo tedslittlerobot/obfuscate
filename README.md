@@ -1,0 +1,4 @@
+obfuscate
+=========
+
+a string obfuscator
