@@ -30,6 +30,15 @@
 		 */
 		Object.defineProperty( self, '_name', { value: 'obfuscator' } );
 		/**
+		 * _chars
+		 * The characters to use for obfuscating
+		 * @type String
+		 */
+		Object.defineProperty( self, '_chars', {
+			writable: true,
+			value: '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%&*'
+		} );
+		/**
 		 * settings
 		 * The instance settings
 		 * @type Object
@@ -43,13 +52,12 @@
 		self.init();
 	};
 
-	Obfuscator.prototype.init = {
-			init: function () {
-					console.log('xD');
-			},
-			yourOtherFunction: function () {
-					// some logic
-			}
+	Obfuscator.prototype.init = function () {
+		console.log('xD');
+	};
+	Obfuscator.prototype.randomCharacter = function ( ) {
+		var self = this;
+		return self._chars[ ~~(Math.random() * self._chars.length) ];
 	};
 
 	// A really lightweight plugin wrapper around the constructor,
