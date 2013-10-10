@@ -1,1 +1,4 @@
-# Text Obscure
+obfuscate
+=========
+
+a string obfuscator
